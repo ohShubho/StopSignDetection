@@ -28,9 +28,9 @@ def sliding_window(image, step_size, window_size):
             yield (x, y, image[y:y+window_size[1], x:x+window_size[0]])
 
 def main():
-    target_image = cv2.imread(args["image"])
+    target_image = cv2.imread(args.image)
     target_image = cv2.resize(target_image, (500, 500))
-    prototype_image = cv2.imread(args["prototype"])
+    prototype_image = cv2.imread(args.prototype)
 
     max_sim = -1
     max_box = (0, 0, 0, 0)
